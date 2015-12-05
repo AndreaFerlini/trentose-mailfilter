@@ -4,14 +4,17 @@ describe("MailModel", function() {
     var rules = MailModel.rules;
     var messages = MailModel.messages;
       
-    expect(regole).toBe(["spam.com", "compratutto.it"]);
-    expect(messaggi).toBe(["news@spam.com", "carlo@gmail.com", "jessy@compratutto.it", "trentose2@googlegroups.com"]);
+    expect(rules).toEqual(["spam.com", "compratutto.it"]);
+    expect(messages).toEqual(["news@spam.com", "carlo@gmail.com", "jessy@compratutto.it", "trentose2@googlegroups.com"]);
   });
     
-  /*it("filter should work properly", function(){
+  it("filter should work properly", function(){
+    MailModel.init();
+    var filtered = MailModel.filter();
+    expect(filtered).toEqual(["carlo@gmail.com", "trentose2@googlegroups.com"]);
     
   });
-*/ 
+
 });
 
 /*
