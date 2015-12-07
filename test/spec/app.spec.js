@@ -12,7 +12,6 @@ describe("MailModel", function() {
     MailModel.init();
     var filtered = MailModel.filter();
     expect(filtered).toEqual(["carlo@gmail.com", "trentose2@googlegroups.com"]);
-    
   });
 
 });
