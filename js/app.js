@@ -11,7 +11,6 @@ var MailModel = {
      this.rules = rules;
      this.messages = msgs;
    }, 
-  
    /**
     * Filters out messages in the "database" that match the spam rules.
     * @return an array of messages, excluding those that match the filter rules.
