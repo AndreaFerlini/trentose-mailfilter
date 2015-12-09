@@ -21,15 +21,12 @@ var MailModel = {
       for (var i=0; i<filteredMsg.length; i++){
           for (var j=0; j<this.rules.length; j++){
               if (filteredMsg[i].indexOf(this.rules[j])>=0){
-                  filteredMsg.splice(i, 1); //non funziona correttamente
+                  filteredMsg.splice(i, 1); //rimuove l'elemento i (1 solo elemento)
               }
           }
       }
-        console.log(filteredMsg);
         return filteredMsg;
     }
-
-  
 };
 
 // Example of usage:
